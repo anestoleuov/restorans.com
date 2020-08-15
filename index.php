@@ -19,7 +19,7 @@ if (isset($_POST['form'])) {
 <div class="dateTimeInput">
 
     <form>
-        <p>Выберите дату и время для заказа:</p>
+        <p>Выберите дату и время для заказа:--</p>
         <label for="filterDate">Дата заказа:</label>
         <input id="filterDate" name="filterDate" type="datetime-local" value="">
         <label for="filterDuration">Выберите длительность в часах:</label>
