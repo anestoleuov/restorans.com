@@ -32,6 +32,8 @@ function createJsonTable(jsonMsg, body) {
         });
     });
     tbl.appendChild(tblBody);
+    console.log(tbl);
+    body.innerHTML="";
     body.append(tbl);
 }
 
@@ -43,6 +45,7 @@ function searchRestorans() {
         url: "/",
         data: {form:'searchRestorans',json: JSON.stringify(restoran)}
     }).done(function (msg) {
+        console.log(msg)
         let jsonMSG = JSON.parse(msg);
         let destination = document.getElementById('listOfRestorans');
         createJsonTable(jsonMSG, destination);
