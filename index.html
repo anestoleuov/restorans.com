@@ -9,45 +9,190 @@
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/main.js" defer async></script>
-    </head>
+</head>
 
 <body>
-<div class="dateTimeInput">
+    <div class="dateTimeInput">
+        <form>
+            <p class="tableForOrder">Выберите дату и время для заказа:</p>
+            <label for="filterDate">Дата заказа:</label>
+            <input id="filterDate" name="filterDate" type="datetime-local" value="">
+            <label for="filterDuration">Выберите длительность в часах:</label>
+            <input id="filterDuration" name="filterDuration" min="0" max="24" type="number" value="">
+            <label for="filterPersonCount">Выберите количество людей:</label>
+            <input id="filterPersonCount" name="filterPersonCount" min="1" type="number" value="">
+            <input name="searchRestorans" id="searchRestorans" type="submit" value="Поиск">
+        </form>
+        <form>
+            <p>Размещение Заказа</p>
+            <label for="tel">Телефон--:</label>
+            <input name="tel" id="tel" type="tel">
+            <label for="restoran_id">Номер ресторана:</label>
+            <input name="restoran_id" id="restoran_id" type="number">
+            <input name="putOrder" id="putOrder" type="submit" value="Размещение Заказа">
+        </form>
+        <div>
+            <input type="button" id="getOrdersList" value="Получить список заказов">
+        </div>
+        <div id="listOfOrders">
+            <div id="listOfOrders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>zakaz_tel</th>
+                            <th>restoran_id</th>
+                            <th>person_quantity</th>
+                            <th>date_start</th>
+                            <th>date_finish</th>
+                            <th>created_date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>123</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>123</td>
+                            <td>1233</td>
+                            <td>2020-08-15 17:53:03</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>2020-08-15 17:57:58</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>2020-08-15 17:59:00</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>333</td>
+                            <td>2</td>
+                            <td>222</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:00:10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>123123</td>
+                            <td>3</td>
+                            <td>23</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:28:39</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>123123</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:43:27</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>123123</td>
+                            <td>1</td>
+                            <td>123</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:45:26</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>123123</td>
+                            <td>1</td>
+                            <td>123</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:45:35</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>123123</td>
+                            <td>1</td>
+                            <td>123</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:45:38</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>123123</td>
+                            <td>1</td>
+                            <td>123</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 18:45:38</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>2020</td>
+                            <td>2020</td>
+                            <td>2020-08-15 20:27:48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <form class="tableForOrder">
-        <p >Выберите дату и время для заказа:</p>
-        <label for="filterDate">Дата заказа:</label>
-        <input id="filterDate" name="filterDate" type="datetime-local" value="">
-        <label for="filterDuration">Выберите длительность в часах:</label>
-        <input id="filterDuration" name="filterDuration" min="0" max="24" type="number" value="">
-        <label for="filterPersonCount">Выберите количество людей:</label>
-        <input id="filterPersonCount" name="filterPersonCount" min="1" type="number" value="">
-        <input name="searchRestorans" id="searchRestorans" type="submit" value="Поиск">
-    </form>
-
-
-    <form>
-        <p>Размещение Заказа</p>
-        <label for="tel">Телефон--:</label>
-        <input name="tel" id="tel" type="tel">
-        <label for="restoran_id">Номер ресторана:</label>
-        <input name="restoran_id" id="restoran_id" type="number">
-        <input name="putOrder" id="putOrder" type="submit" value="Размещение Заказа">
-    </form>
-    <div>
-        <input type="button" id="getOrdersList" value="Получить список заказов">
+        </div>
+        <div id="listOfRestorans">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>coor_x</th>
+                        <th>coor_y</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Skazka</td>
+                        <td>11</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ases</td>
+                        <td>22</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bagira</td>
+                        <td>22</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fant</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <div id="listOfOrders">
-        <div id="listOfOrders"><table><thead><tr><th>id</th><th>zakaz_tel</th><th>restoran_id</th><th>person_quantity</th><th>date_start</th><th>date_finish</th><th>created_date</th></tr></thead><tbody><tr><td>1</td><td>123</td><td>1</td><td>2</td><td>123</td><td>1233</td><td>2020-08-15 17:53:03</td></tr><tr><td>8</td><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>2020-08-15 17:57:58</td></tr><tr><td>9</td><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>2020-08-15 17:59:00</td></tr><tr><td>10</td><td>333</td><td>2</td><td>222</td><td>2020</td><td>2020</td><td>2020-08-15 18:00:10</td></tr><tr><td>11</td><td>123123</td><td>3</td><td>23</td><td>2020</td><td>2020</td><td>2020-08-15 18:28:39</td></tr><tr><td>12</td><td>123123</td><td>1</td><td>1</td><td>2020</td><td>2020</td><td>2020-08-15 18:43:27</td></tr><tr><td>13</td><td>123123</td><td>1</td><td>123</td><td>2020</td><td>2020</td><td>2020-08-15 18:45:26</td></tr><tr><td>14</td><td>123123</td><td>1</td><td>123</td><td>2020</td><td>2020</td><td>2020-08-15 18:45:35</td></tr><tr><td>15</td><td>123123</td><td>1</td><td>123</td><td>2020</td><td>2020</td><td>2020-08-15 18:45:38</td></tr><tr><td>16</td><td>123123</td><td>1</td><td>123</td><td>2020</td><td>2020</td><td>2020-08-15 18:45:38</td></tr><tr><td>17</td><td>4</td><td>5</td><td>3</td><td>2020</td><td>2020</td><td>2020-08-15 20:27:48</td></tr></tbody></table></div>
-
-
-    </div>
-    <div id="listOfRestorans"><table><thead><tr><th>id</th><th>name</th><th>coor_x</th><th>coor_y</th></tr></thead><tbody><tr><td>1</td><td>Skazka</td><td>11</td><td>22</td></tr><tr><td>2</td><td>Ases</td><td>22</td><td>33</td></tr><tr><td>3</td><td>Bagira</td><td>22</td><td>44</td></tr><tr><td>5</td><td>Fant</td><td>23</td><td>24</td></tr></tbody></table></div>
-
-</div>
 
 </body>
 
 </html>
-
