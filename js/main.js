@@ -8,7 +8,6 @@ let restoran = {
         restoran.fTel = parseInt(document.getElementById('tel').value)
     }
 }
-
 function createJsonTable(jsonMsg, body) {
     let tbl = document.createElement('table');
     let tblBody = document.createElement('tbody');
@@ -32,12 +31,9 @@ function createJsonTable(jsonMsg, body) {
         });
     });
     tbl.appendChild(tblBody);
-    console.log(tbl);
     body.innerHTML="";
     body.append(tbl);
 }
-
-
 function searchRestorans() {
     restoran.collectData()
     $.ajax({
@@ -45,7 +41,6 @@ function searchRestorans() {
         url: "/",
         data: {form:'searchRestorans',json: JSON.stringify(restoran)}
     }).done(function (msg) {
-        console.log(msg)
         let jsonMSG = JSON.parse(msg);
         let destination = document.getElementById('listOfRestorans');
         createJsonTable(jsonMSG, destination);
@@ -67,7 +62,9 @@ function getOrdersList() {
         url: "/",
         data: {form:'getOrdersList'}
     }).done(function (msg) {
-        document.getElementById('listOfOrders').innerText=msg;
+        let jsonMSG = JSON.parse(msg);
+        let destination = document.getElementById('listOfOrders');
+        createJsonTable(jsonMSG, destination);
     });
 
 }
@@ -79,7 +76,7 @@ document.getElementById('putOrder').addEventListener("click", function (e) {
     e.preventDefault();
     putOrder();
 })
-document.getElementById('putOrder').addEventListener("click", function (e) {
+document.getElementById('getOrdersList').addEventListener("click", function (e) {
     e.preventDefault();
     getOrdersList();
 })
