@@ -8,7 +8,7 @@ if (isset($_POST['form'])) {
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title>Расписание вечеринок!</title>
+    <title>Расписание вечеринок! 222</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/jquery-ui.js"></script>
