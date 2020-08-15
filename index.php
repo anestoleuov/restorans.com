@@ -31,10 +31,10 @@ if (isset($_POST['form'])) {
 
 
     <form>
-        <p>Размещение Заказа333</p>
+        <p>Размещение Заказа</p>
         <label for="tel">Телефон--:</label>
         <input name="tel" id="tel" type="tel">
-        <label for="restoran_id">Номер ресторана3344:</label>
+        <label for="restoran_id">Номер ресторана:</label>
         <input name="restoran_id" id="restoran_id" type="number">
         <input name="putOrder" id="putOrder" type="submit" value="Размещение Заказа">
     </form>
