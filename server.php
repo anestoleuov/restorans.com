@@ -1,4 +1,5 @@
 <?php
+// comment;
 if ($_POST['form']=="searchRestorans") {
     $json = $_REQUEST['json'];
     $decoded = json_decode($json, true);
