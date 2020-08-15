@@ -19,7 +19,7 @@ if (isset($_POST['form'])) {
 <div class="dateTimeInput">
 
     <form>
-        <p>Выберите дату и время для заказа:----</p>
+        <p>Выберите дату и время для заказа:</p>
         <label for="filterDate">Дата заказа:</label>
         <input id="filterDate" name="filterDate" type="datetime-local" value="">
         <label for="filterDuration">Выберите длительность в часах:</label>
@@ -34,7 +34,7 @@ if (isset($_POST['form'])) {
         <p>Размещение Заказа333</p>
         <label for="tel">Телефон--:</label>
         <input name="tel" id="tel" type="tel">
-        <label for="restoran_id">Номер ресторана33:</label>
+        <label for="restoran_id">Номер ресторана3344:</label>
         <input name="restoran_id" id="restoran_id" type="number">
         <input name="putOrder" id="putOrder" type="submit" value="Размещение Заказа">
     </form>
