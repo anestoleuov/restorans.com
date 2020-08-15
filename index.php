@@ -31,7 +31,7 @@ if (isset($_POST['form'])) {
 
 
     <form>
-        <p>Размещение Заказа222</p>
+        <p>Размещение Заказа333</p>
         <label for="tel">Телефон:</label>
         <input name="tel" id="tel" type="tel">
         <label for="restoran_id">Номер ресторана:</label>
