@@ -38,7 +38,7 @@ function searchRestorans() {
     restoran.collectData()
     $.ajax({
         method: "POST",
-        url: "/",
+        url: "server.php",
         data: {form:'searchRestorans',json: JSON.stringify(restoran)}
     }).done(function (msg) {
         let jsonMSG = JSON.parse(msg);
@@ -50,7 +50,7 @@ function putOrder() {
     restoran.collectData()
     $.ajax({
         method: "POST",
-        url: "/",
+        url: "server.php",
         data: {form:'putOrder',json: JSON.stringify(restoran)}
     }).done(function (msg) {
         document.getElementById('listOfRestorans').innerText=msg;
@@ -59,7 +59,7 @@ function putOrder() {
 function getOrdersList() {
     $.ajax({
         method: "POST",
-        url: "/",
+        url: "server.php",
         data: {form:'getOrdersList'}
     }).done(function (msg) {
         let jsonMSG = JSON.parse(msg);
