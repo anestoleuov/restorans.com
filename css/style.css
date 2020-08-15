@@ -1,16 +1,6 @@
-.searchRestorans {
+.tableForOrder {
+    
 }
 
-h1 {
-    color: red;
-}
 
-form {
-    border: 2px solid red;
-    background-color: darkgray;
 
-}
-
-table, th, td  {
-    border: 1px solid red;
-}
