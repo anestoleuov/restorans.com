@@ -2,8 +2,9 @@ let restoran = {
     collectData: function () {
         restoran.fDuration = parseInt(document.getElementById('filterDuration').value);
         restoran.fPersonCount = document.getElementById('filterPersonCount').value;
-        restoran.fDateStart = new Date(document.getElementById('filterDate').value);
-        restoran.fDateFinish = new Date(restoran.fDateStart.getTime()+1000*60*60*restoran.fDuration);
+        let date = new Date(document.getElementById('filterDate').value);
+        restoran.fDateStart = date.getTime();
+        restoran.fDateFinish = restoran.fDateStart+1000*60*60*restoran.fDuration;
         restoran.fRestoranID = parseInt(document.getElementById('restoran_id').value);
         restoran.fTel = parseInt(document.getElementById('tel').value)
     }
